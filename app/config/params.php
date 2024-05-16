@@ -1,6 +1,9 @@
 <?php
 //PARAMS
 
+//initialisation des zones dynamique
+$content = '';
+
 // Paramètres de connexion
 
 define('DB_HOST','localhost:3306');
