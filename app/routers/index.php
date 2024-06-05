@@ -10,8 +10,8 @@ include_once '../app/controllers/authorsController.php';
 // CTRL: photosController
 // ACTION: indexAction
 elseif(isset($_GET['books'])) :
-    include_once '../app/controllers/booksController.php';
-    \App\Controllers\BooksController\indexAction($connexion);
+    include_once '../app/routers/books.php';
+    
 // ROUTE DES AUTHORS
 // PATERN: /?authors
 // CTRL: authorsController

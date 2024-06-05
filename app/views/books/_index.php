@@ -6,7 +6,7 @@
             <span
               class="bg-white text-gray-800 px-2 py-1 rounded-md text-sm font-semibold absolute top-2 left-2"
             >
-              Drame
+            <?php echo $book['catName']; ?>
             </span>
             <img
               class="w-full h-48 object-cover"
@@ -32,7 +32,7 @@
                 <span class="text-yellow-500 mr-1">
                   <i class="fas fa-star"></i>
                 </span>
-                <span>8.9</span>
+                <span><?php echo $book['note']?></span>
               </div>
 
               <p class="text-gray-400">
@@ -40,7 +40,7 @@
               </p>
 
               <a
-                href="book.html"
+                href="?books=show&id=<?php echo $book['bookID']?>"
                 class="inline-block mt-4 bg-red-500 hover:bg-red-800 rounded-full px-4 py-2 text-white"
               >
                 More details
