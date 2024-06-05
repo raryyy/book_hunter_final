@@ -29,7 +29,7 @@
                 </span>
               </div>
               <h3 class="text-xl font-bold"><?php echo $book['title']; ?></h3>
-              <h4 class="text mb-2 text-gray-400"> ?? </h4>
+              <h4 class="text mb-2 text-gray-400"> <?php echo $book['firstname']?> <?php echo $book['lastname']?></h4>
               <div class="flex items-center mb-2">
                 <span class="text-yellow-500 mr-1">
                   <i class="fas fa-star"></i>
