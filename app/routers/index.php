@@ -1,11 +1,15 @@
 <?php
 // ROUTER PRINCIPAL
 
+if(isset($_GET['authors'])) :
+include_once '../app/controllers/authorsController.php';
+\App\Controllers\AuthorsController\indexAction($connexion);
+
 // ROUTE DES BOOKS 
 // PATERN: /?photos
 // CTRL: photosController
 // ACTION: indexAction
-if(isset($_GET['books'])) :
+elseif(isset($_GET['books'])) :
     include_once '../app/controllers/booksController.php';
     \App\Controllers\BooksController\indexAction($connexion);
 // ROUTE DES AUTHORS
