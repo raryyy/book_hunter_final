@@ -10,11 +10,11 @@ function homeAction(PDO $connexion){
 
     //BOOKS
     include_once '../app/models/booksModel.php';
-    $books = \App\Models\BooksModel\findAll($connexion);
+    $books = \App\Models\BooksModel\findAll($connexion,3);
 
     // AUTHORS
     include_once '../app/models/authorsModel.php';
-    $authors = \App\Models\AuthorsModel\findAll($connexion);
+    $authors = \App\Models\AuthorsModel\findAll($connexion,3);
     // Je charge la vue 'home' dans $content 
     global $content;
     ob_start();

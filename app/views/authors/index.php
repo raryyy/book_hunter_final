@@ -1,11 +1,5 @@
-          <!-- Books -->
-          <h2 class="text-2xl font-bold mb-4">Popular books</h2>
-        
-          <!-- On charge le partials qui contienet les books -->
-          <?php include '../app/views/books/_index.php'; ?>
-
-          <h2 class="text-2xl font-bold mt-8 mb-4">Popular authors</h2>  
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<h2 class="text-2xl font-bold mb-4">CATALOGUE</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <?php foreach($authors as $author) : ?>
           <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
@@ -33,4 +27,11 @@
             </div>
           </article>
           <?php endforeach; ?>
+        </div>
+          <div class="text-center mt-8">
+          <button
+            class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Load More
+          </button>
         </div>
