@@ -8,9 +8,6 @@ function findAll(PDO $connexion, int $limit = 6): array {
     FROM books b
     INNER JOIN authors a ON b.author_id = a.id
     INNER JOIN categories c ON b.category_id = c.id
-    INNER JOIN users_notations un ON un.book_id = b.id
-    INNER JOIN books_has_tags bht ON bht.book_id = b.id;
-    INNER JOIN tags t ON bht.tag_id = t.id
     ORDER BY b.created_at DESC
     LIMIT :limit;";
     $rs = $connexion->prepare($sql);
@@ -24,12 +21,21 @@ function findOneById(PDO $connexion, int $id): array {
     FROM books b
     INNER JOIN authors a ON b.author_id = a.id
     INNER JOIN categories c ON b.category_id = c.id
-    INNER JOIN users_notations un ON un.book_id = b.id
-    INNER JOIN books_has_tags bht ON bht.book_id = b.id;
-    INNER JOIN tags t ON bht.tag_id = t.id
+        INNER JOIN users_notations un ON un.book_id = b.id
     WHERE b.id = :id;";
     $rs = $connexion->prepare($sql);
     $rs->bindValue(':id', $id,PDO::PARAM_INT);
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
+}
+
+function findAllByAuthorId(PDO $connexion, int $id): array {
+    $sql = "SELECT *
+    FROM books 
+    WHERE author_id = :id
+    ORDER BY title ASC;";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id,PDO::PARAM_INT);
+    $rs->execute();
+    return $rs->fetchAll(PDO::FETCH_ASSOC);
 }

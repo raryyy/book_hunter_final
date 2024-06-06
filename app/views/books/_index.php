@@ -18,7 +18,7 @@
                 <span
                   class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2"
                 >
-                  #society
+                a faire
                 </span>
                 <span
                   class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
@@ -32,7 +32,7 @@
                 <span class="text-yellow-500 mr-1">
                   <i class="fas fa-star"></i>
                 </span>
-                <span><?php echo $book['note']?></span>
+                <span>A FAIRE</span>
               </div>
 
               <p class="text-gray-400">

@@ -12,7 +12,7 @@
               <p class="text-gray-300 mb-4">
                 Par
                 <a
-                  href="author.html"
+                  href="?authors=show&id=<?php echo $author['id'] ?>"
                   class="hover:text-red-500 underline font-medium"
                   ><?php echo $book['firstname']; ?>
                   <?php echo $book['lastname']; ?>
@@ -36,7 +36,7 @@
                 <a
                   href="#"
                   class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-2 hover:bg-gray-800 hover:text-white"
-                  >#philosophie</a
+                  >a faire</a
                 >
               </div>
               <a
